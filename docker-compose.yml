@@ -6,6 +6,7 @@ services:
     image: itzg/bungeecord:latest
     ports:
       - "25565:25565"
+    network_mode: host
     environment:
       TYPE: BUNGEECORD
       TZ: "America/Los_Angeles"
@@ -120,6 +121,7 @@ services:
       - "25566:25565"
     environment:
       SERVER_NAME: creative
+      MOTD: "Big Oak Creative"
       TYPE: PAPER
       VERSION: latest
       MODE: creative
