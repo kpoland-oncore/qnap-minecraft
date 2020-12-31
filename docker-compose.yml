@@ -1,0 +1,149 @@
+version: "3.7"
+services:
+
+  bungeecord:
+    container_name: bungeecord
+    image: itzg/bungeecord:latest
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: BUNGEECORD
+      TZ: "America/Los_Angeles"
+    volumes:
+      - /share/kyle/containers/bungeecord:/server
+    restart: on-failure
+
+  tavi:
+    container_name: tavi
+    image: itzg/minecraft-server:adopt11
+    ports:
+      - "25568:25565"
+    environment:
+      SERVER_NAME: tavi
+      TYPE: PAPER
+      VERSION: latest
+      MODE: survival
+      DIFFICULTY: hard
+      FORCE_GAMEMODE: "true"
+      MEMORY: 1G
+      MAX_PLAYERS: 15
+      MAX_WORLD_SIZE: 5000
+      OPS: "poe_now,gnomegod,DuckMan11,SmallDuckFriend"
+      ALLOW_NETHER: "true"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      GENERATE_STRUCTURES: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      PVP: "true"
+      LEVEL_TYPE: DEFAULT
+      EULA: "TRUE"
+      TZ: "America/Los_Angeles"
+      ONLINE_MODE: "false"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      SNOOPER_ENABLED: "false"
+    volumes:
+      - /share/kyle/containers/tavi:/data
+    restart: on-failure
+
+  compass:
+    container_name: compass
+    image: itzg/minecraft-server:adopt11
+    ports:
+      - "25587:25565"
+    environment:
+      SERVER_NAME: compass
+      TYPE: PAPER
+      VERSION: latest
+      MODE: survival
+      DIFFICULTY: hard
+      FORCE_GAMEMODE: "true"
+      MEMORY: 2G
+      MAX_PLAYERS: 15
+      MAX_WORLD_SIZE:
+      OPS: "GoldfishMan10,RobloxDater69,poe_now,Shady_Rose,SmallDuckFriend,gnomegod,FluffleBoy13,KowalskiTheKing,Ellbelliot"
+      ALLOW_NETHER: "true"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      GENERATE_STRUCTURES: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      PVP: "true"
+      LEVEL_TYPE: DEFAULT
+      EULA: "TRUE"
+      TZ: "America/Los_Angeles"
+      ONLINE_MODE: "true"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      SNOOPER_ENABLED: "false"
+    volumes:
+      - /share/kyle/containers/compass:/data
+    restart: on-failure
+
+  empires:
+    container_name: empires
+    image: itzg/minecraft-server:adopt11
+    ports:
+      - "25570:25565"
+    environment:
+      SERVER_NAME: empires
+      TYPE: PAPER
+      VERSION: latest
+      MODE: survival
+      DIFFICULTY: easy
+      FORCE_GAMEMODE: "true"
+      MEMORY: 1G
+      MAX_PLAYERS: 10
+      MAX_WORLD_SIZE: 1000
+      SEED: 72659
+      OPS: "poe_now,SmallDuckFriend"
+      ALLOW_NETHER: "true"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      GENERATE_STRUCTURES: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      PVP: "true"
+      LEVEL_TYPE: DEFAULT
+      EULA: "TRUE"
+      TZ: "America/Los_Angeles"
+      ONLINE_MODE: "false"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      SNOOPER_ENABLED: "false"
+    volumes:
+      - /share/kyle/containers/empires:/data
+    restart: on-failure
+
+  creative:
+    container_name: creative
+    image: itzg/minecraft-server:adopt11
+    ports:
+      - "25566:25565"
+    environment:
+      SERVER_NAME: creative
+      TYPE: PAPER
+      VERSION: latest
+      MODE: creative
+      DIFFICULTY: normal
+      FORCE_GAMEMODE: "true"
+      MEMORY: 4G
+      MAX_PLAYERS: 40
+      MAX_WORLD_SIZE: 29999984
+      VIEW_DISTANCE: 7
+      SEED:
+      OPS: "_Wolferret_,poe_now,gnomegod,M3mry,Wolferrett,SmallDuckFriend,GoldfishMan10,pigmap,RobloxDater69,ChubbyWubby,KowalskiTheKing,GoldenDisguise,Ellbelliot"
+      ALLOW_NETHER: "false"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      GENERATE_STRUCTURES: "false"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      PVP: "true"
+      LEVEL_TYPE: DEFAULT
+      EULA: "TRUE"
+      TZ: "America/Los_Angeles"
+      ONLINE_MODE: "false"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      SNOOPER_ENABLED: "false"
+    volumes:
+      - /share/kyle/containers/creative:/data
+    restart: on-failure
