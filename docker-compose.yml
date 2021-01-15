@@ -22,7 +22,7 @@ services:
     environment:
       SERVER_NAME: tavi
       TYPE: PAPER
-      VERSION: latest
+      VERSION: 1.16.4
       MODE: survival
       DIFFICULTY: hard
       FORCE_GAMEMODE: "true"
@@ -55,7 +55,7 @@ services:
     environment:
       SERVER_NAME: compass
       TYPE: PAPER
-      VERSION: latest
+      VERSION: 1.16.4
       MODE: survival
       DIFFICULTY: hard
       FORCE_GAMEMODE: "true"
@@ -88,7 +88,7 @@ services:
     environment:
       SERVER_NAME: empires
       TYPE: PAPER
-      VERSION: latest
+      VERSION: 1.16.4
       MODE: survival
       DIFFICULTY: easy
       FORCE_GAMEMODE: "true"
@@ -123,7 +123,7 @@ services:
       SERVER_NAME: creative
       MOTD: "Big Oak Creative"
       TYPE: PAPER
-      VERSION: latest
+      VERSION: 1.16.4
       MODE: creative
       DIFFICULTY: normal
       FORCE_GAMEMODE: "true"
