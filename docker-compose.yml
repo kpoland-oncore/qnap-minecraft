@@ -12,7 +12,7 @@ services:
       TZ: "America/Los_Angeles"
     volumes:
       - /share/kyle/containers/bungeecord:/server
-    restart: on-failure
+    restart: always
 
   tavi:
     container_name: tavi
@@ -22,7 +22,7 @@ services:
     environment:
       SERVER_NAME: tavi
       TYPE: PAPER
-      VERSION: 1.16.4
+      VERSION: 1.16.5
       MODE: survival
       DIFFICULTY: hard
       FORCE_GAMEMODE: "true"
@@ -45,7 +45,7 @@ services:
       SNOOPER_ENABLED: "false"
     volumes:
       - /share/kyle/containers/tavi:/data
-    restart: on-failure
+    restart: always
 
   compass:
     container_name: compass
@@ -55,7 +55,7 @@ services:
     environment:
       SERVER_NAME: compass
       TYPE: PAPER
-      VERSION: 1.16.4
+      VERSION: 1.16.5
       MODE: survival
       DIFFICULTY: hard
       FORCE_GAMEMODE: "true"
@@ -78,7 +78,7 @@ services:
       SNOOPER_ENABLED: "false"
     volumes:
       - /share/kyle/containers/compass:/data
-    restart: on-failure
+    restart: always
 
   empires:
     container_name: empires
@@ -88,7 +88,7 @@ services:
     environment:
       SERVER_NAME: empires
       TYPE: PAPER
-      VERSION: 1.16.4
+      VERSION: 1.16.5
       MODE: survival
       DIFFICULTY: easy
       FORCE_GAMEMODE: "true"
@@ -112,7 +112,7 @@ services:
       SNOOPER_ENABLED: "false"
     volumes:
       - /share/kyle/containers/empires:/data
-    restart: on-failure
+    restart: always
 
   creative:
     container_name: creative
@@ -123,7 +123,7 @@ services:
       SERVER_NAME: creative
       MOTD: "Big Oak Creative"
       TYPE: PAPER
-      VERSION: 1.16.4
+      VERSION: 1.16.5
       MODE: creative
       DIFFICULTY: normal
       FORCE_GAMEMODE: "true"
@@ -148,4 +148,4 @@ services:
       SNOOPER_ENABLED: "false"
     volumes:
       - /share/kyle/containers/creative:/data
-    restart: on-failure
+    restart: always
